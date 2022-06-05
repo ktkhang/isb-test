@@ -42,7 +42,7 @@
 
 @mixin col-offset($size, $columns: $grid-columns) {
    $num: divide($size, $columns);
-   margin-left: if($num == 0, 0, #{calc(100 * $num / 12) + "%"});
+   margin-left: if($num == 0, 0, #{calc(100 * #{$num} / 12) + "%"});
 }
 
 @mixin grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
