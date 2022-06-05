@@ -1,0 +1,45 @@
+.main-staffs {
+   height: $main-staffs-height;
+   position: relative;
+
+   .carousel__slide {
+      img {
+         @include user-select-none;
+         pointer-events: none;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__info {
+      @include position(absolute, null, null, 0, 0);
+      padding: 38px;
+      color: $color-white;
+      display: grid;
+      gap: 6px;
+      label {
+         @include font_24_b;
+      }
+   }
+
+   &__navigator {
+      @include position(absolute, 0, 0, 0, 0);
+      @include flex-center;
+      justify-content: space-between;
+      pointer-events: none;
+      z-index: 10;
+      padding-left: 24px;
+      padding-right: 24px;
+      .btn-prev,
+      .btn-next {
+         pointer-events: all;
+         padding: 8px;
+      }
+      .btn-next {
+         src-loader {
+            transform: rotate(180deg);
+         }
+      }
+   }
+}

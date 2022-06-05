@@ -1,0 +1,43 @@
+$res_xs: "screen and (max-width: 575.98px)";
+$res_sm: "screen and (max-width: 767.98px)";
+$res_md: "screen and (max-width: 991.98px)";
+$res_lg: "screen and (max-width: 1199.98px)";
+
+@mixin media_sm() {
+   @media #{$res_sm} {
+      @content;
+   }
+}
+@mixin media_xs() {
+   @media #{$res_xs} {
+      @content;
+   }
+}
+
+@mixin media_md() {
+   @media #{$res_md} {
+      @content;
+   }
+}
+@mixin media_lg() {
+   @media #{$res_lg} {
+      @content;
+   }
+}
+
+// Large devices (desktops, less than 1200px)
+@include media_lg {
+   @import "large";
+}
+// Medium devices (tablets, less than 992px)
+@include media_md {
+   @import "medium";
+}
+// Small devices (landscape phones, less than 768px)
+@include media_sm {
+   @import "small";
+}
+// Extra small devices (portrait phones, less than 576px)
+@include media_xs {
+   @import "extra-small";
+}

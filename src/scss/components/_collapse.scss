@@ -1,0 +1,25 @@
+.collapse-container {
+   .collapse {
+      opacity: 0;
+      transform: translateY(-30%);
+      transition: $transition-common;
+      z-index: -1;
+      &__content {
+         pointer-events: none;
+         height: 0;
+         overflow: hidden;
+      }
+   }
+
+   &.open {
+      .collapse {
+         opacity: 1;
+         transform: translateY(0);
+         z-index: 0;
+         &__content {
+            pointer-events: all;
+            height: initial;
+         }
+      }
+   }
+}

@@ -1,0 +1,54 @@
+button {
+   -webkit-appearance: button;
+   text-transform: none;
+   overflow: visible;
+   touch-action: manipulation;
+}
+
+.btn-base {
+   @include font_16_b;
+   @include flex-center;
+   justify-content: center;
+   padding: 12px 30px;
+   height: 50px;
+   border: 1px solid transparent;
+   outline: none;
+   box-shadow: none;
+   cursor: pointer;
+   text-decoration: unset;
+   transition: $transition-common;
+   width: max-content;
+}
+
+.btn-light {
+   @extend .btn-base;
+   color: $color-white;
+   border-color: $color-white;
+   background-color: transparent;
+   &:hover,
+   &:active {
+      color: $color-red;
+      background-color: $color-white;
+   }
+}
+
+.btn-primary {
+   @extend .btn-base;
+   color: $color-white;
+   border-color: $color-red;
+   background-color: $color-red;
+   &:hover,
+   &:active {
+      background-color: $color-red-hover;
+   }
+}
+
+.btn-transparent {
+   @extend .btn-base;
+   color: $color-red;
+   background-color: transparent;
+   &:hover,
+   &:active {
+      color: $color-red-hover;
+   }
+}

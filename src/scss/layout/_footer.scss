@@ -1,0 +1,27 @@
+footer {
+   @include flex-center;
+   justify-content: space-between;
+   background-color: $color-header;
+   color: $color-disable;
+   padding: 54px 75px;
+
+   .logo {
+      min-width: 180px;
+   }
+   .socials {
+      @include flex-center;
+      gap: 12px;
+      min-width: 180px;
+      a {
+         color: $color-disable;
+      }
+   }
+
+   .copyright {
+      @include font_14_m;
+   }
+
+   .footer-extra {
+      display: none;
+   }
+}

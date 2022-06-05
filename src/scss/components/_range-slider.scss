@@ -1,0 +1,56 @@
+.range-slider {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 20px;
+
+   &__range {
+      height: calc(#{$range-slider-height} / 4);
+      position: relative;
+      margin: calc(#{$range-slider-height} / 2) 0px;
+      &::before {
+         content: "";
+         display: block;
+         height: calc(#{$range-slider-height} / 4);
+         background: $color-bg;
+         box-shadow: $shadow-input;
+      }
+
+      &--indicator {
+         height: calc(#{$range-slider-height} / 4);
+         background: $color-red;
+         @include position(absolute, 0, 0, 0, 0);
+      }
+
+      &--start,
+      &--end {
+         cursor: pointer;
+         width: $range-slider-height;
+         height: $range-slider-height;
+         border-radius: 50%;
+         background: $color-red;
+         transform: translateY(-50%);
+         pointer-events: visible;
+         @include position(absolute, 50%, null, null, 0);
+         transition: background 0.4s ease-in-out;
+         &:hover {
+            background: $color-red_hover;
+         }
+      }
+   }
+
+   &__input-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: $color-disable;
+      span {
+         width: $range-slider-input-gap;
+         text-align: center;
+         @include user-select-none;
+      }
+      input {
+         width: calc(100% / 2 - (#{$range-slider-input-gap} / 2));
+      }
+   }
+}

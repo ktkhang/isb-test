@@ -1,0 +1,42 @@
+@mixin user-select-none {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+@mixin font($weight: normal, $fontSize: 18, $lineHeight: 20) {
+	font-weight: $weight;
+	font-size: #{$fontSize}px;
+	line-height: #{$lineHeight}px;
+	letter-spacing: initial;
+}
+
+@mixin icon-size($size) {
+	font-size: $size + px;
+	width: $size + px;
+	min-width: $size + px;
+	height: $size + px;
+	display: inline-flex;
+}
+
+@mixin font-icon($fontName: $font-icon-awesome) {
+	display: inline-block;
+	font-size: inherit;
+	text-rendering: auto;
+	text-shadow: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	&::after {
+		font-family: $fontName;
+		font-style: normal;
+	}
+}

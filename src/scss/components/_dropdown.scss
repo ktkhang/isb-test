@@ -1,0 +1,27 @@
+.dropdown-container {
+   position: relative;
+   z-index: 1000;
+   .dropdown {
+      position: relative;
+      z-index: 1;
+      .dropdown__content {
+         position: relative;
+         z-index: 1;
+         pointer-events: none;
+         height: 0;
+         overflow: hidden;
+         opacity: 0;
+         transition: $transition-2;
+      }
+   }
+
+   &.open {
+      .dropdown {
+         .dropdown__content {
+            pointer-events: all;
+            height: initial;
+            opacity: 1;
+         }
+      }
+   }
+}

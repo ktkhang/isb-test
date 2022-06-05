@@ -1,0 +1,12 @@
+
+node_modules/
+
+.npm
+
+.eslintcache
+
+.env
+
+dist
+
+build/Release

@@ -1,0 +1,50 @@
+.main-categories {
+   padding-bottom: 90px;
+
+   &__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+   }
+
+   &__card {
+      position: relative;
+      cursor: pointer;
+      display: grid;
+      overflow: hidden;
+
+      img {
+         @include user-select-none;
+         pointer-events: none;
+         width: 100%;
+         object-fit: cover;
+         z-index: -1;
+         min-height: 250px;
+         transition: $transition-common;
+         &.center-img {
+            min-height: 530px;
+         }
+      }
+      &--info {
+         @include position(absolute, null, null, 0, 0);
+         padding: 30px;
+         color: $color-white;
+         display: grid;
+         label {
+            @include font_24_b;
+            margin-bottom: 6px;
+         }
+      }
+
+      &:hover {
+         img {
+            transform: scale(1.1);
+         }
+      }
+   }
+
+   &__cards-right {
+      @include flex-center;
+      gap: 30px;
+   }
+}

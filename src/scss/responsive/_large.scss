@@ -1,0 +1,16 @@
+/**
+* Large devices (desktops, less than 1200px)
+*/
+header {
+   .top-bar {
+      &__contact {
+         display: none;
+      }
+      &__intro {
+         display: none;
+      }
+   }
+}
+.container {
+   min-width: calc(100vw - 30px);
+}

@@ -1,0 +1,35 @@
+.main-testimonials {
+   padding-top: 90px;
+   padding-bottom: 90px;
+   background-color: $color-white;
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      label {
+         @include flex-center;
+         @include font_18_b;
+         gap: 19px;
+         img {
+            @include icon-size(50);
+            overflow: hidden;
+            border-radius: 50%;
+            min-width: 50px;
+            object-fit: cover;
+            pointer-events: none;
+         }
+      }
+      p {
+         @include font_18_r2;
+         font-style: italic;
+         padding-right: 30px;
+         margin-top: 0;
+         margin-bottom: 0;
+      }
+   }
+
+   .carousel {
+      height: 290px;
+   }
+}

@@ -1,0 +1,116 @@
+$_red: (
+  "100": #da2640,
+  "base": #eb3751,
+);
+
+$_dark: (
+  "700": #f7f7f7,
+  "500": #b7b7b7,
+  "300": #e0e0e0,
+  "100": #282e3e,
+  "50": rgba(1, 1, 1, 0.05),
+  "base": #010101,
+);
+
+$_light: (
+  "500": rgba(255, 255, 255, 0.5),
+  "100": rgba(255, 255, 255, 0.15),
+  "base": #ffffff,
+);
+
+$shadows: (
+  "input": inset 0px 1px 2px rgba(0, 0, 0, 0.09),
+  "card": 0px 0px 10px rgba(0, 0, 0, 0.22),
+  "select": 0px 0px 4px rgba(0, 0, 0, 0.22),
+) !default;
+
+$colors: (
+  "red": $_red,
+  "dark": $_dark,
+  "light": $_light,
+) !default;
+
+@function color($color, $key) {
+  @return var(#{--#{$color}}-#{$key});
+}
+
+@function shadow($key) {
+  @return var(#{--shadow-#{$key}});
+}
+
+@function colorOrg($color, $key) {
+  $content: map-get($colors, $color);
+  @if (map-has-key($content, $key)) {
+    $result: map-get($content, $key);
+    @return $result;
+  }
+  @return "";
+}
+
+:root {
+  @each $color, $value in $colors {
+    @each $shade, $value in map-get($colors, $color) {
+      $jo: --#{$color};
+      #{$jo}-#{$shade}: #{colorOrg($color, $shade)};
+    }
+  }
+  @each $shade, $value in $shadows {
+    $jo: "--shadow";
+    #{$jo}-#{$shade}: #{$value};
+  }
+}
+
+@each $color, $value in $colors {
+  @each $shade, $value in map-get($colors, $color) {
+    .text-#{$color}-#{$shade} {
+      color: #{color($color, $shade)};
+    }
+    .bg-#{$color}-#{$shade} {
+      background-color: #{color($color, $shade)};
+    }
+  }
+}
+
+@each $shade, $value in $shadows {
+  .shadow-#{$shade} {
+    box-shadow: #{shadow($shade)};
+  }
+}
+
+$input-height: 50px;
+$header-top-bar-height: 50px;
+$header-height: 130px;
+$range-slider-height: 16px;
+$range-slider-input-gap: 30px;
+$container-full-margin: 75px;
+$main-slideshow-height: 620px;
+$main-staffs-height: 570px;
+$font-main: Ubuntu, Roboto, Microsoft Sans Serif, Arial, sans-serif;
+$font-icon-material: MaterialIcons;
+$font-icon-awesome: FontAwesome;
+$font-icon-hotel: Hotel;
+$font-icon-linecons: linecons;
+$transition-common: all 0.4s ease-in-out;
+$transition-2: all 0.2s ease-in-out;
+$transition-slideshow: left 0.4s cubic-bezier(0.47, 0.13, 0.15, 0.89);
+$grid-gutter-width: 30px !default;
+$grid-columns: 12 !default;
+$grid-row-columns: 6 !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+$gutters: $spacers !default;

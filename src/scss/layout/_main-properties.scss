@@ -1,0 +1,68 @@
+.main-properties {
+   padding-bottom: 90px;
+   padding-top: 90px;
+   background-color: $color-white;
+
+   &__card {
+      &--price {
+         @include font_18_b;
+         @include position(absolute, null, 0, 20px);
+         color: $color-white;
+         background-color: $color-red;
+         z-index: 1;
+         padding: 5px 24px;
+         > span {
+            @include font_14_b;
+         }
+      }
+      &--img {
+         position: relative;
+         display: grid;
+         overflow: hidden;
+         cursor: pointer;
+
+         img {
+            @include user-select-none;
+            pointer-events: none;
+            width: 100%;
+            object-fit: cover;
+            min-height: 250px;
+            transition: $transition-common;
+         }
+
+         &:hover {
+            img {
+               transform: scale(1.1);
+            }
+         }
+      }
+
+      label {
+         @include font_24_b;
+         margin-top: 24px;
+         display: block;
+         color: $color-red;
+      }
+      &--info {
+         @include font_18_r;
+         margin-top: 24px;
+         display: flex;
+         flex-wrap: wrap;
+         gap: 20px 15px;
+         > span {
+            width: calc(50% - 15px / 2);
+            @include flex-center;
+            gap: 12px;
+            i {
+               color: $color-disable;
+            }
+         }
+      }
+      &--desc {
+         @include font_18_r2;
+         margin-top: 24px;
+         margin-bottom: 60px;
+         display: block;
+      }
+   }
+}

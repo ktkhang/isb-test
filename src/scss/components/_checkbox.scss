@@ -1,0 +1,35 @@
+.checkbox {
+   cursor: pointer;
+   display: flex;
+   align-items: flex-start;
+   gap: 12px;
+
+   input[type="checkbox"] {
+      display: none;
+   }
+
+   &__check {
+      @include icon-size(20);
+      background-color: $color-bg;
+      border: 1px solid $color-gray;
+      transition: $transition-2;
+      src-loader {
+         @include icon-size(20);
+         justify-content: center;
+         opacity: 0;
+         transform: scale(0.4);
+         transition: $transition-2;
+      }
+   }
+
+   &.checked {
+      .checkbox__check {
+         border-color: $color-red;
+         background-color: $color-red;
+         src-loader {
+            opacity: 1;
+            transform: scale(1);
+         }
+      }
+   }
+}

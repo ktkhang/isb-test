@@ -1,0 +1,31 @@
+.main-advantages {
+   background-color: $color-header;
+   color: $color-white;
+   padding-top: 94px;
+   padding-bottom: 30px;
+
+   &__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-bottom: 64px;
+
+      &--icon {
+         @include icon-size(100);
+         @include flex-center;
+         justify-content: center;
+         min-width: 100px;
+         border-radius: 50%;
+         background-color: $color-red;
+      }
+      label {
+         @include font_24_b;
+         margin-bottom: 12px;
+      }
+      p {
+         @include font_18_r2;
+         margin-top: 12px;
+         margin-bottom: 0;
+      }
+   }
+}

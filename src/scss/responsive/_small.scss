@@ -1,0 +1,349 @@
+/**
+* Small devices (landscape phones, less than 768px)
+*/
+
+$header-height: 56px;
+$side-padding: 15px;
+
+.container-full {
+   padding: 0px $side-padding;
+   .container {
+      width: 100%;
+      min-width: 100%;
+   }
+}
+
+// header
+header {
+   .top-bar {
+      display: none;
+   }
+
+   .header {
+      height: $header-height;
+      background-color: $color-header;
+      padding: 0px;
+      &__toggle-menu {
+         display: grid;
+         width: 54px;
+         height: 56px;
+         padding: 0;
+         color: $color-white !important;
+      }
+      &__logo {
+         color: $color-white;
+      }
+      &__menu-bar {
+         display: flex;
+         flex-direction: column;
+         border-top: 1px solid $color-white_15;
+         max-width: unset;
+         .btn-transparent {
+            width: 100%;
+            padding: 12px 15px;
+            display: flex;
+            justify-content: flex-start;
+         }
+         &--item {
+            width: 100%;
+            border-bottom: 1px solid $color-white_15;
+            .dropdown {
+               position: relative;
+               width: 100%;
+               background-color: transparent;
+               box-shadow: none;
+            }
+         }
+      }
+      &__content {
+         z-index: 1000;
+         opacity: 0;
+         transform: translateX(-100%);
+         pointer-events: none;
+         transition: $transition-2;
+         height: calc(100vh - #{$header-height});
+         top: $header-height;
+         left: 0;
+         right: 0;
+         background-color: $color-header;
+         .header__menu-bar,
+         .header__submission {
+            display: none;
+         }
+
+         &.open {
+            display: block;
+
+            opacity: 1;
+            transform: translateX(0);
+            pointer-events: all;
+            .header__menu-bar {
+               display: flex;
+            }
+            .header__submission {
+               @include position(relative, 0, 0, 0, 0);
+               display: block;
+               margin: 15px;
+            }
+         }
+         .dropdown-container.open {
+            .dropdown {
+               border-top: 1px solid $color-white_15;
+            }
+         }
+      }
+   }
+}
+
+// slideshow
+.main-slideshow {
+   height: 228px;
+   .slideshow {
+      &__item {
+         img {
+            width: 100%;
+            height: 100%;
+         }
+      }
+      &__indicators {
+         display: none;
+      }
+   }
+   &__content {
+      display: none;
+   }
+}
+
+// form
+.main-form {
+   margin-top: 60px;
+   padding-bottom: 60px;
+
+   &__container {
+      padding: 20px 15px;
+   }
+
+   h3 {
+      @include font_28_b;
+   }
+   .input__label {
+      margin-top: 16px;
+   }
+
+   &__line2 {
+      flex-direction: column;
+   }
+   &__price-group {
+      padding-right: 0;
+   }
+   &__bed-path-group {
+      max-width: 100%;
+   }
+   &__submission .btn-primary {
+      margin-top: 40px;
+      max-width: 160px;
+   }
+   &__group-features {
+      margin-top: 24px;
+   }
+}
+
+.section-title {
+   display: flex;
+   justify-content: center;
+   padding-bottom: 22px;
+   h2 {
+      @include font_28_b;
+   }
+   &::after {
+      left: unset;
+   }
+}
+.section-content {
+   padding-top: 39px;
+}
+
+// categories
+.main-categories {
+   padding-bottom: 60px;
+   .section-content {
+      padding-top: 60px;
+   }
+
+   &__card img {
+      min-height: 194px;
+      .center-img {
+         min-height: 414px;
+      }
+   }
+
+   &__cards-right {
+      flex-direction: column-reverse;
+      margin-top: 30px;
+   }
+}
+
+// properties
+.main-properties {
+   padding-top: 64px;
+   padding-bottom: 54px;
+
+   &__card {
+      label {
+         text-align: center;
+         margin-top: 18px;
+      }
+      &--info {
+         margin-top: 12px;
+      }
+      &--img img {
+         min-height: 208px;
+      }
+      &--desc {
+         margin-top: 12px;
+         margin-bottom: 30px;
+         text-align: center;
+      }
+   }
+   .btn-primary {
+      width: 100%;
+   }
+}
+
+// advantages
+.main-advantages {
+   padding-top: 64px;
+   padding-bottom: 40px;
+
+   .section-content {
+      padding-top: 0;
+      margin-top: -15px;
+   }
+   &__item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 24px;
+      margin-top: 54px;
+      margin-bottom: 0px;
+   }
+}
+
+// staffs
+.main-staffs {
+   height: 384px;
+}
+
+// testimonials
+.main-testimonials {
+   padding-top: 60px;
+   padding-bottom: 50px;
+   .section-content {
+      padding-top: 50px;
+   }
+
+   &__item {
+      align-items: center;
+      p {
+         padding-right: 0;
+         text-align: center;
+      }
+   }
+}
+
+// footer
+footer {
+   flex-direction: column;
+   padding: 54px 0px 60px;
+
+   .logo {
+      margin-bottom: 24px;
+   }
+
+   .copyright {
+      padding: 30px 15px;
+      text-align: center;
+   }
+
+   .higlight {
+      color: $color-red-hover;
+   }
+
+   .socials {
+      min-width: initial;
+   }
+
+   .footer-extra {
+      @include font_18_r2;
+      display: flex;
+      flex-direction: column;
+
+      &__label {
+         @include font_24_b;
+         display: block;
+         width: 100%;
+         text-align: center;
+         margin-bottom: 14px;
+         color: $color-white;
+      }
+
+      .info {
+         padding: 24px 15px;
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         &__text {
+            display: flex;
+            gap: 8px;
+         }
+      }
+
+      .blogroll {
+         padding: 30px 15px 15px;
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         &__item {
+            @include flex-center;
+            gap: 13px;
+            src-loader {
+               color: $color-white;
+            }
+         }
+      }
+
+      .recent-posts {
+         padding: 30px 15px 15px;
+
+         &__title {
+            margin-bottom: 8px;
+            color: $color-red-hover;
+            display: block;
+         }
+         &__time {
+            @include font_14_r;
+            display: block;
+            margin-bottom: 20px;
+            &:last-of-type {
+               margin-bottom: 0;
+            }
+         }
+         .footer-extra__label {
+            margin-bottom: 24px;
+         }
+      }
+
+      .newsletter {
+         padding: 30px 15px;
+         p {
+            margin-top: 10;
+            margin-bottom: 24px;
+            text-align: center;
+         }
+         .btn-primary {
+            margin: 20px auto 0px;
+            width: max-content;
+         }
+      }
+   }
+}

@@ -1,0 +1,36 @@
+.fa {
+   @include font-icon;
+   @include font(normal, 16, 18);
+}
+.fa-mui {
+   @include font-icon($font-icon-material);
+   @include font(normal, 16, 18);
+}
+
+.fa-user::after {
+   content: "\f007";
+}
+.fa-facebook::after {
+   content: "\f09a";
+}
+.fa-twitter::after {
+   content: "\f099";
+}
+.fa-pinterest::after {
+   content: "\f231";
+}
+.fa-vimeo::after {
+   content: "\f27d";
+}
+.fa-google::after {
+   content: "\f1a0";
+}
+.fa-rss::after {
+   content: "\f09e";
+}
+.fa-local-phone::after {
+   content: "\e551";
+}
+.fa-draft::after {
+   content: "\e151";
+}

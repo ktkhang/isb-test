@@ -1,0 +1,94 @@
+.main-form {
+   pointer-events: none;
+   margin-top: -146px;
+   padding-bottom: 89px;
+   position: relative;
+   z-index: 1;
+
+   &__container {
+      pointer-events: all;
+      box-shadow: $shadow-card;
+      background-color: $color-white;
+      padding: 30px;
+   }
+
+   h3 {
+      @include font_30_b;
+      margin: 0;
+   }
+
+   .input__label {
+      margin-top: 22px;
+   }
+
+   &__line2 {
+      display: flex;
+   }
+
+   &__price-group {
+      padding-right: 30px;
+   }
+
+   &__bed-path-group {
+      width: 100%;
+      max-width: 240px;
+   }
+
+   &__submission {
+      .btn-primary {
+         margin-top: 58px;
+         width: 100%;
+      }
+   }
+
+   &__group-features {
+      padding-top: 30px;
+
+      &--toggler {
+         @extend .btn-base;
+         @include font_18_r;
+         color: $color-red;
+         padding: 0;
+         height: max-content;
+         gap: 12px;
+         background-color: transparent;
+
+         .toggle-icon {
+            @include icon-size(20);
+            background-color: $color-red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            span {
+               width: 14px;
+               height: 2px;
+               background-color: $color-white;
+               position: absolute;
+               transition: $transition-common;
+            }
+            span:first-child {
+               transform: rotate(90deg);
+            }
+         }
+      }
+
+      &--collapse {
+         padding-top: 5px;
+         width: 100%;
+         max-width: 533px;
+         .row {
+            --gutter-y: 15px;
+         }
+      }
+
+      &.open {
+         .toggle-icon {
+            span:first-child {
+               transform: rotate(0deg);
+               opacity: 0.2;
+            }
+         }
+      }
+   }
+}

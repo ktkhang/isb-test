@@ -1,0 +1,66 @@
+@mixin font_18_r {
+   @include font(normal, 18, 20);
+}
+@mixin font_18_r2 {
+   @include font(normal, 18, 28);
+}
+@mixin font_18_b {
+   @include font(700, 18, 24);
+}
+@mixin font_18_i {
+   @include font(normal, 18, 28);
+   font-style: italic;
+}
+
+@mixin font_16_r {
+   @include font(normal, 16, 20);
+}
+@mixin font_16_b {
+   @include font(700, 16, 20);
+}
+
+@mixin font_14_r {
+   @include font(normal, 14, 20);
+}
+@mixin font_14_m {
+   @include font(500, 14, 20);
+}
+@mixin font_14_b {
+   @include font(700, 14, 20);
+}
+
+@mixin font_24_r {
+   @include font(normal, 24, 32);
+}
+@mixin font_24_b {
+   @include font(700, 24, 28);
+}
+
+@mixin font_26_b {
+   @include font(700, 26, 32);
+}
+
+@mixin font_28_b {
+   @include font(700, 28, 32);
+}
+
+@mixin font_30_b {
+   @include font(700, 30, 40);
+}
+
+@mixin font_48_b {
+   @include font(700, 48, 56);
+}
+
+@mixin font_64_b {
+   @include font(700, 64, 76);
+}
+
+@mixin flex-center {
+   display: flex;
+   align-items: center;
+}
+@mixin grid-center {
+   display: grid;
+   align-items: center;
+}

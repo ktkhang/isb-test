@@ -1,0 +1,27 @@
+.base-input {
+   color: $color-black;
+   background: $color-bg;
+   box-shadow: $shadow-input;
+   border: none;
+   border-radius: 0;
+   cursor: text;
+   height: $input-height;
+   padding: 8px 20px;
+   width: 100%;
+   text-align: left;
+   transition: $transition-common;
+   @include font_18_r;
+   &::placeholder {
+      color: $color-disable;
+   }
+}
+
+.input__label {
+   display: block;
+   padding: 8px 0;
+   @include font_14_m;
+}
+
+input {
+   @extend .base-input;
+}

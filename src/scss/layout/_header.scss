@@ -1,0 +1,102 @@
+header {
+   .top-bar {
+      @include grid-center;
+      height: $header-top-bar-height;
+      color: $color-disable;
+      background-color: $color-bg;
+      padding: 0px $container-full-margin;
+
+      a {
+         @include flex-center;
+         gap: 6px;
+         text-decoration: unset;
+         color: $color-black;
+         i {
+            color: $color-disable;
+         }
+      }
+
+      &__login {
+         color: $color-red !important;
+         transition: $transition-common;
+         &:hover {
+            color: $color-red-hover !important;
+         }
+      }
+
+      &__contact {
+         @include flex-center;
+         gap: 56px;
+         white-space: nowrap;
+      }
+
+      &__socials {
+         @include flex-center;
+         gap: 12px;
+         justify-content: flex-end;
+      }
+   }
+
+   .header {
+      @include flex-center;
+      position: relative;
+      height: $header-height;
+      width: 100%;
+      padding: 0px $container-full-margin;
+
+      &__toggle-menu {
+         display: none;
+      }
+      &__logo {
+         cursor: pointer;
+         z-index: 1;
+         position: relative;
+         width: max-content;
+         src-loader {
+            display: grid;
+         }
+      }
+      &__content {
+         @include position(absolute, 40px, 0, 40px, 0);
+         display: flex;
+         justify-content: center;
+      }
+
+      &__menu-bar {
+         @include flex-center;
+         max-width: calc(100% - (75px * 2) - 211px - 151px - 86px);
+         // overflow: hidden;
+
+         &--item {
+            position: relative;
+            .dropdown {
+               @include position(absolute, 50px, null, null, 0);
+               width: 270px;
+               z-index: 10;
+               background-color: $color-white;
+               box-shadow: $shadow-card;
+               display: flex;
+               flex-direction: column;
+            }
+            .dropdown-item {
+               @include flex-center;
+               padding: 10px 30px;
+               transition: $transition-2;
+               cursor: pointer;
+               a {
+                  text-decoration: unset;
+                  color: $color-red;
+               }
+               &:hover {
+                  background-color: $color-black_05;
+               }
+            }
+         }
+      }
+
+      &__submission {
+         @include position(absolute, null, $container-full-margin);
+         z-index: 1;
+      }
+   }
+}

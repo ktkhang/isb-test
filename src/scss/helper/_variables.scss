@@ -1,0 +1,15 @@
+$color-red: color("red", "base");
+$color-red-hover: color("red", "100");
+$color-black: color("dark", "base");
+$color-header: color("dark", "100");
+$color-disable: color("dark", "500");
+$color-gray: color("dark", "300");
+$color-black_05: color("dark", "50");
+$color-bg: color("dark", 700);
+$color-white: color("light", "base");
+$color-white_50: color("light", "500");
+$color-white_15: color("light", "100");
+
+$shadow-input: shadow("input");
+$shadow-card: shadow("card");
+$shadow-select: shadow("select");
