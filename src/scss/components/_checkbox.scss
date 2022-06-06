@@ -10,12 +10,13 @@
 
    &__check {
       @include icon-size(20);
+      @include flex-center;
       background-color: $color-bg;
       border: 1px solid $color-gray;
       transition: $transition-2;
-      src-loader {
-         @include icon-size(20);
-         justify-content: center;
+      justify-content: center;
+      .img-svg {
+         @include icon-size(12);
          opacity: 0;
          transform: scale(0.4);
          transition: $transition-2;
@@ -26,7 +27,7 @@
       .checkbox__check {
          border-color: $color-red;
          background-color: $color-red;
-         src-loader {
+         .img-svg {
             opacity: 1;
             transform: scale(1);
          }

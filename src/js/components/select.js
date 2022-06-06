@@ -32,9 +32,9 @@ class Select extends BaseComponent {
 		this._button.textContent = this._selectOptions[0]?.textContent || '';
 		this._value = this._selectOptions[0]?.value || '';
 
-		const chevron = document.createElement('src-loader');
+		const chevron = document.createElement('img');
 		chevron.setAttribute('src', icDown);
-		chevron.setAttribute('class', CHEVRON_CLASS);
+		chevron.setAttribute('class', `${CHEVRON_CLASS} img-svg`);
 		this._selectContainer.appendChild(chevron);
 
 		this._ul = document.createElement('ul');

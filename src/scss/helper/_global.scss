@@ -47,10 +47,6 @@ body {
    max-width: calc(100vw - 30px);
 }
 
-src-loader {
-   @include grid-center;
-}
-
 .section-title {
    display: block;
    position: relative;
@@ -70,4 +66,10 @@ src-loader {
 
 .section-content {
    padding-top: 60px;
+}
+
+.img-svg {
+   @include user-select-none;
+   @include grid-center;
+   object-fit: contain;
 }

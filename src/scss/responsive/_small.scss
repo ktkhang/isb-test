@@ -48,7 +48,7 @@ header {
             width: 100%;
             border-bottom: 1px solid $color-white_15;
             .dropdown {
-               position: relative;
+               @include position(relative, 0, 0, 0, 0);
                width: 100%;
                background-color: transparent;
                box-shadow: none;
@@ -306,7 +306,7 @@ footer {
          &__item {
             @include flex-center;
             gap: 13px;
-            src-loader {
+            .img-svg {
                color: $color-white;
             }
          }

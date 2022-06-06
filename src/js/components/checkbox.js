@@ -19,7 +19,8 @@ class Checkbox extends BaseComponent {
 		this._container.className = MAIN_CLASS;
 		this._container.title = this._text;
 
-		const icCheck = document.createElement('src-loader');
+		const icCheck = document.createElement('img');
+		icCheck.setAttribute('class', 'img-svg');
 		icCheck.setAttribute('src', icCheckbox);
 
 		const displayCheckbox = document.createElement('span');
