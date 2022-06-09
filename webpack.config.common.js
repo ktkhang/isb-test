@@ -17,10 +17,13 @@ module.exports = {
 	node: {
 		fs: 'empty',
 	},
-	entry: ['./src/js/app.js', './src/scss/main.scss'],
+	entry: {
+		'app': ['./src/js/app.js', './src/scss/main.scss'],
+		'sw': './src/sw.js',
+	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'app.bundle.js',
+		filename: "[name].js",
 	},
 	module: {
 		rules: [

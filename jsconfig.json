@@ -24,6 +24,6 @@
 		"esModuleInterop": true,
 		"experimentalDecorators": true
 	},
-	"include": ["src/**/*.js"],
+	"include": ["src/**/*.js", "src/sw.js"],
 	"exclude": ["node_modules", "**/node_modules/*", "./build/*", "./dist/*"]
 }

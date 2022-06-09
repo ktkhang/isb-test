@@ -152,9 +152,7 @@ header {
    display: flex;
    justify-content: center;
    padding-bottom: 22px;
-   h2 {
-      @include font_28_b;
-   }
+   @include font_28_b;
    &::after {
       left: unset;
    }

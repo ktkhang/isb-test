@@ -82,7 +82,7 @@
 						ELEMENTS
 					</a>
 					<div class="header__menu-bar--item dropdown-container" id="features-drop-menu">
-						<button class="btn-transparent toggler" href="#">
+						<button class="btn-transparent toggler">
 							FEATURES
 						</button>
 						<div class="dropdown">
@@ -163,7 +163,11 @@
 							</div>
 						</div>
 					</div>
-					<img src="static/images/slide1.png"/>
+					<picture>
+						<source type="image/webp" srcset="static/images/slide1.webp">
+						<source type="image/jpeg" srcset="static/images/slide1.jpg">
+						<img src="static/images/slide1.jpg" alt="Modera Lofts" width="1920" height="620"/>
+					</picture>
 				</div>
 				<div class="slideshow__item">
 					<div class="container-full">
@@ -181,7 +185,11 @@
 							</div>
 						</div>
 					</div>
-					<img src="static/images/slide2.png"/>
+					<picture>
+						<source type="image/webp" srcset="static/images/slide2.webp">
+						<source type="image/jpeg" srcset="static/images/slide2.jpg">
+						<img src="static/images/slide2.jpg" alt="53 Rachel Ct 53" width="1920" height="620"/>
+					</picture>
 				</div>
 				<div class="slideshow__item">
 					<div class="container-full">
@@ -199,7 +207,11 @@
 							</div>
 						</div>
 					</div>
-					<img src="static/images/slide3.png"/>
+					<picture>
+						<source type="image/webp" srcset="static/images/slide3.webp">
+						<source type="image/jpeg" srcset="static/images/slide3.jpg">
+						<img src="static/images/slide3.jpg" alt="1530-2 Liberty Ave 4" width="1920" height="620"/>
+					</picture>
 				</div>
 			</div>
 		</section>
@@ -212,11 +224,11 @@
 						<h3>Find Your Home</h3>
 						<div class="row">
 							<div class="col-md-3">
-								<label class="input__label" for="select">Keyword</label>
+								<label class="input__label">Keyword</label>
 								<input placeholder="Any" />
 							</div>
 							<div class="col-md-3">
-								<label class="input__label" for="select">Location</label>
+								<label class="input__label">Location</label>
 								<select id="select-location">
 									<option value="Any">Any</option>
 									<option value="Denver">Denver</option>
@@ -230,7 +242,7 @@
 								</select>
 							</div>
 							<div class="col-md-3">
-								<label class="input__label" for="select">Property Status</label>
+								<label class="input__label">Property Status</label>
 								<select id="select-prop-status">
 									<option value="Any">Any</option>
 									<option value="1">Status 1</option>
@@ -240,7 +252,7 @@
 								</select>
 							</div>
 							<div class="col-md-3">
-								<label class="input__label" for="select">Property Type</label>
+								<label class="input__label">Property Type</label>
 								<select id="select-prop-type">
 									<option value="Any">Any</option>
 									<option value="1">Type 1</option>
@@ -255,13 +267,13 @@
 										<div class="row">
 											<div class="col-md-6 col-xs-12">
 												<div class="input__group">
-													<label class="input__label" for="select">Price (USD)</label>
+													<label class="input__label">Price (USD)</label>
 													<input type="range" id="input-price" />
 												</div>
 											</div>
 											<div class="col-md-6 col-xs-12">
 												<div class="input__group">
-													<label class="input__label" for="select">Area (Sq Ft)</label>
+													<label class="input__label">Area (Sq Ft)</label>
 													<input type="range" id="input-area" />
 												</div>
 											</div>
@@ -271,7 +283,7 @@
 										<div class="row">
 											<div class="col-6">
 												<div class="input__group">
-													<label class="input__label" for="select">Min Beds</label>
+													<label class="input__label">Min Beds</label>
 													<select id="select-min-beds">
 														<option value="Any">Any</option>
 														<option value="1">1</option>
@@ -284,7 +296,7 @@
 											</div>
 											<div class="col-6">
 												<div class="input__group">
-													<label class="input__label" for="select">Min Baths</label>
+													<label class="input__label">Min Baths</label>
 													<select id="select-min-baths">
 														<option value="Any">Any</option>
 														<option value="1">1</option>
@@ -335,9 +347,7 @@
 		<section class="main-categories">
 			<div class="container-full">
 				<div class="container">
-					<label class="section-title">
-						<h2>Categories</h2>
-					</label>
+					<h2 class="section-title">Categories</h2>
 					<div class="section-content">
 						<div class="row">
 							<div class="col-md-4 col-xs-12">
@@ -347,14 +357,22 @@
 											<label>Studio Apartments</label>
 											<span>42 properties</span>
 										</div>
-										<img src="static/images/studio-apartments.png" alt="Studio Apartments" />
+										<picture>
+											<source type="image/webp" srcset="static/images/studio-apartments.webp">
+											<source type="image/jpeg" srcset="static/images/studio-apartments.jpg">
+											<img src="static/images/studio-apartments.jpg" alt="Studio Apartments" width="370" height="250"/>
+										</picture>
 									</div>
 									<div class="main-categories__card">
 										<div class="main-categories__card--info">
 											<label>Luxury Houses</label>
 											<span>42 properties</span>
 										</div>
-										<img src="static/images/luxury-houses.png" alt="Luxury Houses" />
+										<picture>
+											<source type="image/webp" srcset="static/images/luxury-houses.webp">
+											<source type="image/jpeg" srcset="static/images/luxury-houses.jpg">
+											<img src="static/images/luxury-houses.jpg" alt="Luxury Houses" width="370" height="250"/>
+										</picture>
 									</div>
 								</div>
 							</div>
@@ -365,7 +383,11 @@
 											<label>With Swimming Pool</label>
 											<span>42 properties</span>
 										</div>
-										<img src="static/images/swimming-pool.png" class="center-img" alt="With Swimming Pool" />
+										<picture>
+											<source type="image/webp" srcset="static/images/swimming-pool.webp">
+											<source type="image/jpeg" srcset="static/images/swimming-pool.jpg">
+											<img src="static/images/swimming-pool.jpg" class="center-img" alt="With Swimming Pool" width="370" height="530"/>
+										</picture>
 									</div>
 									<div class="main-categories__cards">
 										<div class="main-categories__card">
@@ -373,14 +395,22 @@
 												<label>+1 Bedroom Apartaments</label>
 												<span>42 properties</span>
 											</div>
-											<img src="static/images/bedroom.png" alt="+1 Bedroom Apartaments" />
+											<picture>
+												<source type="image/webp" srcset="static/images/bedroom.webp">
+												<source type="image/jpeg" srcset="static/images/bedroom.jpg">
+												<img src="static/images/bedroom.jpg" alt="+1 Bedroom Apartaments" width="370" height="250"/>
+											</picture>
 										</div>
 										<div class="main-categories__card">
 											<div class="main-categories__card--info">
 												<label>Cozy Houses</label>
 												<span>42 properties</span>
 											</div>
-											<img src="static/images/cozy-houses.png" alt="Cozy Houses" />
+											<picture>
+												<source type="image/webp" srcset="static/images/cozy-houses.webp">
+												<source type="image/jpeg" srcset="static/images/cozy-houses.jpg">
+												<img src="static/images/cozy-houses.jpg" alt="Cozy Houses" width="370" height="250"/>
+											</picture>
 										</div>
 									</div>
 								</div>
@@ -395,16 +425,18 @@
 		<section class="main-properties">
 			<div class="container-full">
 				<div class="container">
-					<label class="section-title">
-						<h2>Recent Properties</h2>
-					</label>
+					<h2 class="section-title">Recent Properties</h2>
 					<div class="section-content">
 						<div class="row">
 							<div class="col-md-4 col-xs-12">
 								<div class="main-properties__card">
 									<div class="main-properties__card--img">
 										<div class="main-properties__card--price">$4,339.00/<span>mon</span></div>
-										<img src="static/images/buiding1.png" alt="Building: 123 on the Park" />
+										<picture>
+											<source type="image/webp" srcset="static/images/building1.webp">
+											<source type="image/jpeg" srcset="static/images/building1.jpg">
+											<img src="static/images/building1.jpg" alt="Building: 123 on the Park" width="370" height="250"/>
+										</picture>
 									</div>
 									<label>Building: 123 on the Park</label>
 									<div class="main-properties__card--info">
@@ -424,7 +456,11 @@
 								<div class="main-properties__card">
 									<div class="main-properties__card--img">
 										<div class="main-properties__card--price">$2,229.00/<span>mon</span></div>
-										<img src="static/images/buiding2.png" alt="San Francisco, CA 94127" />
+										<picture>
+											<source type="image/webp" srcset="static/images/building2.webp">
+											<source type="image/jpeg" srcset="static/images/building2.jpg">
+											<img src="static/images/building2.jpg" alt="San Francisco, CA 94127" width="370" height="250"/>
+										</picture>
 									</div>
 									<label>San Francisco, CA 94127</label>
 									<div class="main-properties__card--info">
@@ -443,7 +479,11 @@
 								<div class="main-properties__card">
 									<div class="main-properties__card--img">
 										<div class="main-properties__card--price">$1,339.00/<span>mon</span></div>
-										<img src="static/images/buiding3.png" alt="2266 48th Ave" />
+										<picture>
+											<source type="image/webp" srcset="static/images/building3.webp">
+											<source type="image/jpeg" srcset="static/images/building3.jpg">
+											<img src="static/images/building3.jpg" alt="2266 48th Ave" width="370" height="250"/>
+										</picture>
 									</div>
 									<label>2266 48th Ave</label>
 									<div class="main-properties__card--info">
@@ -463,7 +503,11 @@
 								<div class="main-properties__card">
 									<div class="main-properties__card--img">
 										<div class="main-properties__card--price">$4,339.00/<span>mon</span></div>
-										<img src="static/images/buiding4.png" alt="1336 N Occidental Blvd" />
+										<picture>
+											<source type="image/webp" srcset="static/images/building4.webp">
+											<source type="image/jpeg" srcset="static/images/building4.jpg">
+											<img src="static/images/building4.jpg" alt="1336 N Occidental Blvd" width="370" height="250"/>
+										</picture>
 									</div>
 									<label>1336 N Occidental Blvd</label>
 									<div class="main-properties__card--info">
@@ -483,7 +527,11 @@
 								<div class="main-properties__card">
 									<div class="main-properties__card--img">
 										<div class="main-properties__card--price">$2,229.00/<span>mon</span></div>
-										<img src="static/images/buiding5.png" alt="650 Kelton Ave #201" />
+										<picture>
+											<source type="image/webp" srcset="static/images/building5.webp">
+											<source type="image/jpeg" srcset="static/images/building5.jpg">
+											<img src="static/images/building5.jpg" alt="650 Kelton Ave #201" width="370" height="250"/>
+										</picture>
 									</div>
 									<label>650 Kelton Ave #201</label>
 									<div class="main-properties__card--info">
@@ -503,7 +551,11 @@
 								<div class="main-properties__card">
 									<div class="main-properties__card--img">
 										<div class="main-properties__card--price">$1,339.00/<span>mon</span></div>
-										<img src="static/images/buiding6.png" alt="1735 N Fuller Ave #124" />
+										<picture>
+											<source type="image/webp" srcset="static/images/building6.webp">
+											<source type="image/jpeg" srcset="static/images/building6.jpg">
+											<img src="static/images/building6.jpg" alt="1735 N Fuller Ave #124" width="370" height="250"/>
+										</picture>
 									</div>
 									<label>1735 N Fuller Ave #124</label>
 									<div class="main-properties__card--info">
@@ -531,9 +583,7 @@
 		<section class="main-advantages">
 			<div class="container-full">
 				<div class="container">
-					<label class="section-title">
-						<h2>Our Advantages</h2>
-					</label>
+					<h2 class="section-title">Our Advantages</h2>
 					<div class="section-content">
 						<div class="row">
 							<div class="col-md-6 col-xs-12">
@@ -594,10 +644,10 @@
 		<section class="main-staffs carousel" id="staffs-carousel">
 			<div class="main-staffs__navigator">
 				<button class="btn-transparent btn-prev carousel__navigator--prev">
-					<img class="img-svg" src="static/icons/ic-arrow-left.svg"/>
+					<img class="img-svg" src="static/icons/ic-arrow-left.svg" alt="previous staffs" width="48" height="48"/>
 				</button>
 				<button class="btn-transparent btn-next carousel__navigator--next">
-					<img class="img-svg" src="static/icons/ic-arrow-left.svg"/>
+					<img class="img-svg" src="static/icons/ic-arrow-left.svg" alt="next staffs" width="48" height="48"/>
 				</button>
 			</div>
 			<div class="carousel__content">
@@ -606,28 +656,44 @@
 						<label>Michelle Nelson</label>
 						<span>Realtor</span>
 					</div>
-					<img src="static/images/author1.png" alt="Michelle Nelson" />
+					<picture>
+						<source type="image/webp" srcset="static/images/author1.webp">
+						<source type="image/jpeg" srcset="static/images/author1.jpg">
+						<img src="static/images/author1.jpg" alt="Michelle Nelson" width="480" height="570"/>
+					</picture>
 				</div>
 				<div class="carousel__slide">
 					<div class="main-staffs__info">
 						<label>Brandon Miller</label>
 						<span>Manager</span>
 					</div>
-					<img src="static/images/author2.png" alt="Brandon Miller" />
+					<picture>
+						<source type="image/webp" srcset="static/images/author2.webp">
+						<source type="image/jpeg" srcset="static/images/author2.jpg">
+						<img src="static/images/author2.jpg" alt="Brandon Miller" width="480" height="570"/>
+					</picture>
 				</div>
 				<div class="carousel__slide">
 					<div class="main-staffs__info">
 						<label>Christina Harvey</label>
 						<span>Realtor</span>
 					</div>
-					<img src="static/images/author3.png" alt="Christina Harvey" />
+					<picture>
+						<source type="image/webp" srcset="static/images/author3.webp">
+						<source type="image/jpeg" srcset="static/images/author3.jpg">
+						<img src="static/images/author3.jpg" alt="Christina Harvey" width="480" height="570"/>
+					</picture>
 				</div>
 				<div class="carousel__slide">
 					<div class="main-staffs__info">
 						<label>Carolyn Stone</label>
 						<span>Realtor</span>
 					</div>
-					<img src="static/images/author4.png" alt="Carolyn Stone" />
+					<picture>
+						<source type="image/webp" srcset="static/images/author4.webp">
+						<source type="image/jpeg" srcset="static/images/author4.jpg">
+						<img src="static/images/author4.jpg" alt="Carolyn Stone" width="480" height="570"/>
+					</picture>
 				</div>
 			</div>
 		</section>
@@ -636,14 +702,16 @@
 		<section class="main-testimonials">
 			<div class="container-full">
 				<div class="container">
-					<label class="section-title">
-						<h2>Testimonials</h2>
-					</label>
+					<h2 class="section-title">Testimonials</h2>
 					<div class="section-content carousel" id="testimonials-carousel">
 						<div class="carousel__content">
 							<div class="carousel__slide main-testimonials__item">
 								<label>
-									<img src="static/images/avatar1.png" />
+									<picture>
+										<source type="image/webp" srcset="static/images/avatar1.webp">
+										<source type="image/jpeg" srcset="static/images/avatar1.jpg">
+										<img src="static/images/avatar1.jpg" alt="Laura Russell" width="50" height="50"/>
+									</picture>
 									<span>Laura Russell</span>
 								</label>
 								<p>
@@ -652,7 +720,11 @@
 							</div>
 							<div class="carousel__slide main-testimonials__item">
 								<label>
-									<img src="static/images/avatar2.png" />
+									<picture>
+										<source type="image/webp" srcset="static/images/avatar2.webp">
+										<source type="image/jpeg" srcset="static/images/avatar2.jpg">
+										<img src="static/images/avatar2.jpg" alt="Richard Santos" width="50" height="50"/>
+									</picture>
 									<span>Richard Santos</span>
 								</label>
 								<p>
@@ -661,7 +733,11 @@
 							</div>
 							<div class="carousel__slide main-testimonials__item">
 								<label>
-									<img src="static/images/avatar3.png" />
+									<picture>
+										<source type="image/webp" srcset="static/images/avatar3.webp">
+										<source type="image/jpeg" srcset="static/images/avatar3.jpg">
+										<img src="static/images/avatar3.jpg" alt="Dylan Medina" width="50" height="50"/>
+									</picture>
 									<span>Dylan Medina</span>
 								</label>
 								<p>
@@ -669,11 +745,6 @@
 								</p>
 							</div>
 						</div>
-						<!-- <div class="carousel__indicators">
-							<span class="active"></span>
-							<span></span>
-							<span></span>
-						</div> -->
 					</div>
 				</div>
 			</div>
@@ -682,7 +753,7 @@
 	</main>
 	<footer>
 		<a class="logo" href="#">
-			<img class="img-svg" src="static/icons/logo-disable.svg"></img>
+			<img class="img-svg" src="static/icons/logo-disable.svg" alt="Grand Vector" width="151" height="48"/>
 		</a>
 		<div class="footer-extra">
 			<div class="info">
@@ -696,25 +767,25 @@
 			<div class="blogroll">
 				<label class="footer-extra__label">Blogroll</label>
 				<div class="blogroll__item">
-					<img class="img-svg" src="static/icons/ic-arrow-right.svg"></img><span class="higlight">Documentation</span>
+					<img class="img-svg" src="static/icons/ic-arrow-right.svg" alt="Expand Documentation" width="12" height="12"/><span class="higlight">Documentation</span>
 				</div>
 				<div class="blogroll__item">
-					<img class="img-svg" src="static/icons/ic-arrow-right.svg"></img><span class="higlight">Feedback</span>
+					<img class="img-svg" src="static/icons/ic-arrow-right.svg" alt="Expand Feedback" width="12" height="12"/><span class="higlight">Feedback</span>
 				</div>
 				<div class="blogroll__item">
-					<img class="img-svg" src="static/icons/ic-arrow-right.svg"></img><span class="higlight">Plugins</span>
+					<img class="img-svg" src="static/icons/ic-arrow-right.svg" alt="Expand Plugins" width="12" height="12"/><span class="higlight">Plugins</span>
 				</div>
 				<div class="blogroll__item">
-					<img class="img-svg" src="static/icons/ic-arrow-right.svg"></img><span class="higlight">Support Forums</span>
+					<img class="img-svg" src="static/icons/ic-arrow-right.svg" alt="Expand Support Forums" width="12" height="12"/><span class="higlight">Support Forums</span>
 				</div>
 				<div class="blogroll__item">
-					<img class="img-svg" src="static/icons/ic-arrow-right.svg"></img><span class="higlight">Themes</span>
+					<img class="img-svg" src="static/icons/ic-arrow-right.svg" alt="Expand Themes" width="12" height="12"/><span class="higlight">Themes</span>
 				</div>
 				<div class="blogroll__item">
-					<img class="img-svg" src="static/icons/ic-arrow-right.svg"></img><span class="higlight">WordPress Blog</span>
+					<img class="img-svg" src="static/icons/ic-arrow-right.svg" alt="Expand WordPress Blog" width="12" height="12"/><span class="higlight">WordPress Blog</span>
 				</div>
 				<div class="blogroll__item">
-					<img class="img-svg" src="static/icons/ic-arrow-right.svg"></img><span class="higlight">WordPress Planet</span>
+					<img class="img-svg" src="static/icons/ic-arrow-right.svg" alt="Expand WordPress Planet" width="12" height="12"/><span class="higlight">WordPress Planet</span>
 				</div>
 			</div>
 			<div class="recent-posts">
@@ -729,7 +800,7 @@
 			<div class="newsletter">
 				<label class="footer-extra__label">Newsletter</label>
 				<p>Enter your email address to receive all news, updates on new arrivals, special offers and other infomation.</p>
-				<input placeholder="Your e-mail"></input>
+				<input placeholder="Your e-mail" />
 				<button class="btn-primary">SUBSCRIBE</button>
 			</div>
 		</div>

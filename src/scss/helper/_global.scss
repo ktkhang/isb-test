@@ -51,16 +51,15 @@ body {
    display: block;
    position: relative;
    padding-bottom: 24px;
+   @include font_48_b;
+   margin: 0;
+   cursor: default;
    &::after {
       @include position(absolute, null, null, 0, 0);
       content: "";
       height: 2px;
       width: 100px;
       background-color: $color-red;
-   }
-   h2 {
-      @include font_48_b;
-      margin: 0;
    }
 }
 
